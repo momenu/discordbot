@@ -1,3 +1,7 @@
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`listening on ${port}`);
+});
 // discord.js モジュールのインポート
 const eris = require("eris");
 // Discord Clientのインスタンス作成
@@ -5,6 +9,7 @@ var bot = new eris("NTgwNzQ1ODcwOTIwOTA4ODMx.XOVVeg.5zJLu7zAVE2zzoDIKCj-Ef8GDv0"
 // トークンの用意
 const token = 'NTgwNzQ1ODcwOTIwOTA4ODMx.XOVVeg.5zJLu7zAVE2zzoDIKCj-Ef8GDv0';
 // 準備完了イベントのconsole.logで通知黒い画面に出る。
+
 bot.on('ready', () => {
   console.log('ready...');
 
