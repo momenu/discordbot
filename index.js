@@ -11,7 +11,7 @@ bot.on('ready', () => {
 });
 
 // メッセージがあったら何かをする
-bot.on('message', message => {
+bot.on("messageCreate", message => {
   if (message.author.bot){
     return;
   }
@@ -33,7 +33,11 @@ bot.on('message', message => {
   var text = "";
   var mention = []
   if (message.content.match(/[@＠](ara|ARA|あら|アラ|ｱﾗ)/)) {
-    text = "@everyone"
+    mention = users.map(function(user){
+      if(user.ara){
+        return user.mention;
+      }
+    });
   } else if (message.content.match(/[@＠](fr|FR|フルランダム|ふるらんだむ|ふるらん|フルラン)/)) {
     mention = users.map(function(user){
       if(user.fr){
@@ -73,7 +77,7 @@ bot.on('message', message => {
   }
   if (text || mention.length){
     var text = text || mention.join('');
-    message.channel.send(text);
+    bot.createMessage(message.channel.id, text);
   }
 });
 
