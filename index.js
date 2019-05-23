@@ -1,14 +1,5 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 3000
-
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
+var port = process.env.PORT || 3000;
+server.listen(port);
 // discord.js モジュールのインポート
 const eris = require("eris");
 // Discord Clientのインスタンス作成
