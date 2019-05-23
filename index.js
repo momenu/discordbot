@@ -1,9 +1,17 @@
-const port = process.env.PORT || 3000;
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 3000
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 // discord.js モジュールのインポート
 const eris = require("eris");
 // Discord Clientのインスタンス作成
-eris().set('port', (process.env.PORT || 3000));
 var bot = new eris("NTgwNzQ1ODcwOTIwOTA4ODMx.XOVVeg.5zJLu7zAVE2zzoDIKCj-Ef8GDv0")
 // トークンの用意
 const token = 'NTgwNzQ1ODcwOTIwOTA4ODMx.XOVVeg.5zJLu7zAVE2zzoDIKCj-Ef8GDv0';
