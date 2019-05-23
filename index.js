@@ -39,6 +39,7 @@ bot.on("messageCreate", message => {
     {name: "paladubde", mention: "<@!241201477043879937>", ara: true, fr: true, sea: true, bf: false, ln: true, michi: true, nomad: true},
     {name: "ishida", mention: "<@!314719495044464640>", ara: true, fr: false, sea: false, bf: true, ln: true, michi: true, nomad: false},
     {name: "zumi", mention: "<@!258948324541988864>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
+    {name: "kom", mention: "<@!157135413478162432>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
   ];
   // メッセージの文字列による条件分岐
   var text = "";
