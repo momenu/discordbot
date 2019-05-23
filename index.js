@@ -50,7 +50,7 @@ bot.on("messageCreate", message => {
         return user.mention;
       }
     });
-  } else if (message.content.match(/[@＠](fr|FR|フルランダム|ふるらんだむ|ふるらん|フルラン)/)) {
+  } else if (message.content.match(/[@＠](fr|FR|ｆｒ|ＦＲ|フルランダム|ふるらんだむ|ふるらん|フルラン)/)) {
     mention = users.map(function(user){
       if(user.fr){
         return user.mention;
