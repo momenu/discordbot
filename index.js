@@ -1,9 +1,11 @@
 // discord.js モジュールのインポート
-const eris = require("eris");
+const Discord = require('discord.js');
 // Discord Clientのインスタンス作成
-var bot = new eris("NTgwNzQ1ODcwOTIwOTA4ODMx.XOVVeg.5zJLu7zAVE2zzoDIKCj-Ef8GDv0");
+const client = new Discord.Client();
+// トークンの用意
+const token = 'NTgwNzQ1ODcwOTIwOTA4ODMx.XOVVeg.5zJLu7zAVE2zzoDIKCj-Ef8GDv0';
 // 準備完了イベントのconsole.logで通知黒い画面に出る。
-bot.on('ready', () => {
+client.on('ready', () => {
   console.log('ready...');
 
 });
@@ -76,4 +78,4 @@ client.on('message', message => {
 });
 
 // Discordへの接続
-bot.connect
+client.login(token);
