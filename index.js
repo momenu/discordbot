@@ -42,52 +42,18 @@ bot.on("messageCreate", message => {
     {name: "kom", mention: "<@!157135413478162432>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
     {name: "cwrouu", mention: "<@!280527727243689984>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
     {name: "guren", mention: "<@!231073116896362504>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
+    {name: "tokotoko", mention: "<@!235750607372156928>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
   ];
   // メッセージの文字列による条件分岐
   var text = "";
   var mention = []
-  if (message.content.match(/[@＠](ara|ARA|あら|アラ|ｱﾗ|ＡＲＡ|ａｒａ)/)) {
-    mention = users.map(function(user){
-      if(user.ara){
-        return user.mention;
-      }
-    });
-  } else if (message.content.match(/[@＠](fr|FR|ｆｒ|ＦＲ|フルランダム|ふるらんだむ|ふるらん|フルラン)/)) {
-    mention = users.map(function(user){
-      if(user.fr){
-        return user.mention;
-      }
-    });
-  } else if (message.content.match(/[@＠](umi|UMI|海|うみ|ウミ|ｳﾐ|ＵＭＩ|ｕｍｉ)/)) {
-    mention = users.map(function(user){
-      if(user.sea){
-        return user.mention;
-      }
-    });
-  } else if (message.content.match(/[@＠](bf|BF|森|mori|モリ|もり|ｂｆ|ＢＦ)/)) {
-    mention = users.map(function(user){
-      if(user.bf){
-        return user.mention;
-      }
-    });
-  } else if (message.content.match(/[@＠](ln|LN|ｌｎ|ＬＮ|エルエヌ|えるえぬ)/)) {
-    mention = users.map(function(user){
-      if(user.ln){
-        return user.mention;
-      }
-    });
-  } else if (message.content.match(/[@＠](michi|道|MICHI|みち|ミチ|ｍｉｃｈｉ|ＭＩＣＨＩ)/)) {
-    mention = users.map(function(user){
-      if(user.michi){
-        return user.mention;
-      }
-    });
-  } else if (message.content.match(/[@＠](nomad|NOMAD|ｎｏｍａｄ|ＮＯＭＡＤ|遊牧|ゆうぼく|ユウボク)/)) {
-    mention = users.map(function(user){
-      if(user.nomad){
-        return user.mention;
-      }
-    });
+  if (message.content.match(/[@＠](ara|ARA|あら|アラ|ｱﾗ|ＡＲＡ|ａｒａ)/)) {mention = users.map(function(user){if(user.ara){return user.mention;}});
+  } else if (message.content.match(/[@＠](fr|FR|ｆｒ|ＦＲ|フルランダム|ふるらんだむ|ふるらん|フルラン)/)) {mention = users.map(function(user){if(user.fr){return user.mention;}});
+  } else if (message.content.match(/[@＠](umi|UMI|海|うみ|ウミ|ｳﾐ|ＵＭＩ|ｕｍｉ)/)) {mention = users.map(function(user){if(user.sea){return user.mention;}});
+  } else if (message.content.match(/[@＠](bf|BF|森|mori|モリ|もり|ｂｆ|ＢＦ)/)) {mention = users.map(function(user){if(user.bf){return user.mention;}});
+  } else if (message.content.match(/[@＠](ln|LN|ｌｎ|ＬＮ|エルエヌ|えるえぬ)/)) {mention = users.map(function(user){if(user.ln){return user.mention;}});
+  } else if (message.content.match(/[@＠](michi|道|MICHI|みち|ミチ|ｍｉｃｈｉ|ＭＩＣＨＩ)/)) {mention = users.map(function(user){if(user.michi){return user.mention;}});
+  } else if (message.content.match(/[@＠](nomad|NOMAD|ｎｏｍａｄ|ＮＯＭＡＤ|遊牧|ゆうぼく|ユウボク)/)) {mention = users.map(function(user){if(user.nomad){return user.mention;}});
   }
   if (text || mention.length){
     var text = text || mention.join('');
