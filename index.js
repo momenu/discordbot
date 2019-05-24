@@ -54,7 +54,7 @@ bot.on("messageCreate", message => {
   } else if (message.content.match(/[@＠](ln|LN|ｌｎ|ＬＮ|エルエヌ|えるえぬ)/)) {mention = users.map(function(user){if(user.ln){return user.mention;}});
   } else if (message.content.match(/[@＠](michi|道|MICHI|みち|ミチ|ｍｉｃｈｉ|ＭＩＣＨＩ)/)) {mention = users.map(function(user){if(user.michi){return user.mention;}});
   } else if (message.content.match(/[@＠](nomad|NOMAD|ｎｏｍａｄ|ＮＯＭＡＤ|遊牧|ゆうぼく|ユウボク)/)) {mention = users.map(function(user){if(user.nomad){return user.mention;}});
-  }
+  } else if (message.content.match(/[@＠]test/) {mention = "test"});
   if (text || mention.length){
     var text = text || mention.join('');
     bot.createMessage(message.channel.id, text);
