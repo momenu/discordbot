@@ -36,13 +36,14 @@ bot.on("messageCreate", message => {
     {name: "yutapon", mention: "<@!380686296991006722>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
     {name: "imasime", mention: "<@!236877372937207809>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
     {name: "gahara", mention: "<@!372778935437754378>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
-    {name: "paladubde", mention: "<@!241201477043879937>", ara: true, fr: true, sea: true, bf: false, ln: true, michi: true, nomad: true},
+    {name: "paladinde", mention: "<@!241201477043879937>", ara: true, fr: true, sea: true, bf: false, ln: true, michi: true, nomad: true},
     {name: "ishida", mention: "<@!314719495044464640>", ara: true, fr: false, sea: false, bf: true, ln: true, michi: true, nomad: false},
     {name: "zumi", mention: "<@!258948324541988864>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
     {name: "kom", mention: "<@!157135413478162432>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
     {name: "cwrouu", mention: "<@!280527727243689984>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
     {name: "guren", mention: "<@!231073116896362504>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
     {name: "tokotoko", mention: "<@!235750607372156928>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
+    {name: "denka", mention: "<@!581699564025675796>", ara: false, fr: false, sea: true, bf: true, ln: true, michi: true, nomad: true},
   ];
   // メッセージの文字列による条件分岐
   var text = "";
