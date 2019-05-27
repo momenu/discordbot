@@ -27,6 +27,17 @@ bot.on("messageCreate", message => {
     return;
   }
 
+  if (message.isMemberMentioned(client.user) && message.member.voiceChannel){
+    message.member.voiceChannel.join().then( connection => {
+      const dispatcher = connection.playFile('https://www.youtube.com/watch?v=5vedwQFQIYY');
+      dispatcher.on('end', reason => {
+        connection.disconnect();
+      });
+    })
+    .catch(console.log);
+    return;
+  }
+
 
   users = [
     {name: "mome", mention: "<@!317591869674487808>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
