@@ -27,16 +27,16 @@ bot.on("messageCreate", message => {
     return;
   }
 
-  if (message.isMemberMentioned(bot.user) && message.member.voiceChannel){
-    message.member.voiceChannel.join().then( connection => {
-      const dispatcher = connection.playFile('https://www.youtube.com/watch?v=5vedwQFQIYY');
-      dispatcher.on('end', reason => {
-        connection.disconnect();
-      });
-    })
-    .catch(console.log);
-    return;
-  }
+  // if (message.isMemberMentioned(bot.user) && message.member.voiceChannel){
+  //   message.member.voiceChannel.join().then( connection => {
+  //     const dispatcher = connection.playFile('https://www.youtube.com/watch?v=5vedwQFQIYY');
+  //     dispatcher.on('end', reason => {
+  //       connection.disconnect();
+  //     });
+  //   })
+  //   .catch(console.log);
+  //   return;
+  // }
 
 
   users = [
