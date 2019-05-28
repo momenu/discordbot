@@ -40,21 +40,21 @@ bot.on("messageCreate", message => {
 
 
   users = [
-    {name: "mome", mention: "<@!317591869674487808>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
-    {name: "may", mention: "<@!228583142393380874>", ara: true, fr: false, sea: false, bf: true, ln: true, michi: true, nomad: false},
-    {name: "noboru", mention: "<@!261124579739566080>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
-    {name: "pietan", mention: "<@!183204482568552448>", ara: true, fr: true, sea: true, bf: false, ln: true, michi: false, nomad: true},
-    {name: "yutapon", mention: "<@!380686296991006722>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
-    {name: "imasime", mention: "<@!236877372937207809>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
-    {name: "gahara", mention: "<@!372778935437754378>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
-    {name: "paladinde", mention: "<@!241201477043879937>", ara: true, fr: true, sea: true, bf: false, ln: true, michi: true, nomad: true},
-    {name: "ishida", mention: "<@!314719495044464640>", ara: true, fr: false, sea: false, bf: true, ln: true, michi: true, nomad: false},
-    {name: "zumi", mention: "<@!258948324541988864>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
-    {name: "kom", mention: "<@!157135413478162432>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
-    {name: "cwrouu", mention: "<@!280527727243689984>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false},
-    {name: "guren", mention: "<@!231073116896362504>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
-    {name: "tokotoko", mention: "<@!235750607372156928>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true},
-    {name: "denka", mention: "<@!581699564025675796>", ara: false, fr: false, sea: true, bf: true, ln: true, michi: true, nomad: true},
+    {name: "mome", mention: "<@!317591869674487808>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true, mega: true},
+    {name: "may", mention: "<@!228583142393380874>", ara: true, fr: false, sea: false, bf: true, ln: true, michi: true, nomad: false, mega: true},
+    {name: "noboru", mention: "<@!261124579739566080>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true, mega: true},
+    {name: "pietan", mention: "<@!183204482568552448>", ara: true, fr: true, sea: true, bf: false, ln: true, michi: false, nomad: true, mega: true},
+    {name: "yutapon", mention: "<@!380686296991006722>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false, mega: false},
+    {name: "imasime", mention: "<@!236877372937207809>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false, mega: true},
+    {name: "gahara", mention: "<@!372778935437754378>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false, mega: false},
+    {name: "paladinde", mention: "<@!241201477043879937>", ara: true, fr: true, sea: true, bf: false, ln: true, michi: true, nomad: true, mega: true},
+    {name: "ishida", mention: "<@!314719495044464640>", ara: true, fr: false, sea: false, bf: true, ln: true, michi: true, nomad: false, mega: true},
+    {name: "zumi", mention: "<@!258948324541988864>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false, mega: false},
+    {name: "kom", mention: "<@!157135413478162432>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true, mega: false},
+    {name: "cwrouu", mention: "<@!280527727243689984>", ara: true, fr: false, sea: false, bf: false, ln: false, michi: false, nomad: false, mega: false},
+    {name: "guren", mention: "<@!231073116896362504>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true, mega: true},
+    {name: "tokotoko", mention: "<@!235750607372156928>", ara: true, fr: true, sea: true, bf: true, ln: true, michi: true, nomad: true, mega: true},
+    {name: "denka", mention: "<@!581699564025675796>", ara: false, fr: false, sea: true, bf: true, ln: true, michi: true, nomad: true, mega: true},
   ];
   // メッセージの文字列による条件分岐
   var text = "";
@@ -66,6 +66,7 @@ bot.on("messageCreate", message => {
   } else if (message.content.match(/[@＠](ln|LN|ｌｎ|ＬＮ|エルエヌ|えるえぬ)/)) {mention = users.map(function(user){if(user.ln){return user.mention;}});
   } else if (message.content.match(/[@＠](michi|道|MICHI|みち|ミチ|ｍｉｃｈｉ|ＭＩＣＨＩ)/)) {mention = users.map(function(user){if(user.michi){return user.mention;}});
   } else if (message.content.match(/[@＠](nomad|NOMAD|ｎｏｍａｄ|ＮＯＭＡＤ|遊牧|ゆうぼく|ユウボク)/)) {mention = users.map(function(user){if(user.nomad){return user.mention;}});
+  } else if (message.content.match(/[@＠](メガラン|めがらん)/)) {mention = users.map(function(user){if(user.mega){return user.mention;}});
   }
   if (text || mention.length){
     var text = text || mention.join('');
